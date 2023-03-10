@@ -115,7 +115,7 @@ function populateUserList(usersparam) {
     let elementLength = listElements.length;
 
     if (users.length == 0) {
-        alert("ja");
+        
         for (let i = 0; i < elementLength; i++) {
             listElements[i].remove();
         }
@@ -129,25 +129,18 @@ function populateUserList(usersparam) {
     }
 }
 
+
 function removeUser(listParam) {
-    console.log(listParam.children);
-    console.log(listParam.children[3]);
 
     let check = listParam.children[3].innerHTML.trim();
 
     for (let i = 0; i < users.length; i++) {
-        console.log("Here");
-        console.log(users[i].email);
-        console.log(check);
 
         if (users[i].email == check) {
-            alert("hey");
             users.splice(i, 1);
-
         }
         else { }
     }
-    console.log(users)
     populateUserList(users);
 }
 
